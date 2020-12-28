@@ -1,0 +1,18 @@
+﻿.input{
+    width: 300px;
+}
+
+.background{
+    background: #0094ff;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.pd{
+    height: 10px;
+}
+
+.mg-top {
+    margin-top: 20px;
+}

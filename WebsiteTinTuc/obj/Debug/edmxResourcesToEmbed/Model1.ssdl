@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuanLyTinTucModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ChuDe">
+    <Key>
+      <PropertyRef Name="IDCD" />
+    </Key>
+    <Property Name="IDCD" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TenChuDe" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TacGia">
+    <Key>
+      <PropertyRef Name="IDTG" />
+    </Key>
+    <Property Name="IDTG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TenTG" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="NgaySinh" Type="varchar" MaxLength="10" />
+    <Property Name="SDT" Type="varchar" MaxLength="12" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TinTuc">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TieuDe" Type="ntext" Nullable="false" />
+    <Property Name="NoiDung" Type="ntext" Nullable="false" />
+    <Property Name="NgayDang" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="IDTG" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TenTG" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="ChuDe" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="QuanLyTinTucModelStoreContainer">
+    <EntitySet Name="ChuDe" EntityType="Self.ChuDe" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TacGia" EntityType="Self.TacGia" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TinTuc" EntityType="Self.TinTuc" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
